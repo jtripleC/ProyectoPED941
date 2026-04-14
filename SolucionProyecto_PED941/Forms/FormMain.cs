@@ -27,7 +27,10 @@ namespace SolucionProyecto_PED941.Forms
 
 
         }
-
+        /*
+         * Apertura de los otros formularios al hacer click en los botones correspondientes, utilizando el método AbrirFormulario para mostrar cada formulario dentro del panelContenedor.
+         * 
+         * */
         private void btnProductos_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new FormProductos());
