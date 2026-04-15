@@ -10,21 +10,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SolucionProyecto_PED941.Utils;
+using SolucionProyecto_PED941.Structures;
+using SolucionProyecto_PED941.Services;
 
 namespace SolucionProyecto_PED941.Forms
 {
     public partial class FormProductos : Form
     {
         private readonly ProductoRepository _productoRepository = new ProductoRepository();
+        private readonly PilaOperaciones _pila = new PilaOperaciones();
+        private readonly DeshacerService _deshacerService;
+
         public FormProductos()
         {
             InitializeComponent();
+            _deshacerService = new DeshacerService(_pila);
         }
 
         private void FormProductos_Load(object sender, EventArgs e)
         {
             CargarProductos();
-            ConfigurarGrid();  
+            ConfigurarGrid();
         }
 
         private void ConfigurarGrid()
@@ -60,6 +66,16 @@ namespace SolucionProyecto_PED941.Forms
 
                 _productoRepository.Insertar(producto);
 
+                var lista = _productoRepository.ObtenerTodos();
+                var ultimo = lista.First();
+
+                _pila.Push(new OperacionDeshacer
+                {
+                    ProductoId = ultimo.Id,
+                    Cantidad = ultimo.Stock,
+                    Tipo = "CREAR"
+                });
+
                 MessageBox.Show("Producto guardado correctamente.", "Éxito",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -71,6 +87,25 @@ namespace SolucionProyecto_PED941.Forms
                 MessageBox.Show("Error al guardar el producto:\n" + ex.Message,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        //Aquí es donde aplico la funcionalidad del boton deshacer.
+        private void btnDeshacer_Click(object sender, EventArgs e)
+        {
+            var operacion = _deshacerService.Deshacer();
+
+            if (operacion == null)
+            {
+                MessageBox.Show("No hay operaciones recientes");
+                return;
+            }
+
+            if (operacion.Tipo == "CREAR")
+            {
+                _productoRepository.Eliminar(operacion.ProductoId);
+            }
+
+            CargarProductos();
         }
 
         private void LimpiarCampos()
@@ -126,5 +161,7 @@ namespace SolucionProyecto_PED941.Forms
 
             return true;
         }
+
+       
     }
 }
