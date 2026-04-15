@@ -60,5 +60,34 @@ namespace SolucionProyecto_PED941.Data.Repositories
 
             return lista;
         }
+
+        public void ActualizarStock(int productoId, int nuevoStock)
+        {
+            using var conexion = _conexionDb.CrearConexion();
+            conexion.Open();
+
+            const string sql = @"UPDATE Productos
+                         SET Stock = @Stock
+                         WHERE Id = @Id";
+
+            using var cmd = new MySqlCommand(sql, conexion);
+            cmd.Parameters.AddWithValue("@Stock", nuevoStock);
+            cmd.Parameters.AddWithValue("@Id", productoId);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void Eliminar(int productoId)
+        {
+            using var conexion = _conexionDb.CrearConexion();
+            conexion.Open();
+
+            const string sql = "DELETE FROM Productos WHERE Id = @Id";
+
+            using var cmd = new MySqlCommand(sql, conexion);
+            cmd.Parameters.AddWithValue("@Id", productoId);
+
+            cmd.ExecuteNonQuery();
+        }
     }
 }
