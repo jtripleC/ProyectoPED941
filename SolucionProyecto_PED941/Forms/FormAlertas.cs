@@ -1,20 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using SolucionProyecto_PED941.Services;
 
 namespace SolucionProyecto_PED941.Forms
 {
     public partial class FormAlertas : Form
     {
+        private AlertaService alertaService = new AlertaService();
+
         public FormAlertas()
         {
             InitializeComponent();
+        }
+
+        private void FormAlertas_Load(object sender, EventArgs e)
+        {
+            CargarAlertas();
+        }
+
+        private void CargarAlertas()
+        {
+            dataGridView1.DataSource = alertaService.ObtenerAlertas();
         }
     }
 }
