@@ -41,6 +41,19 @@ namespace SolucionProyecto_PED941.Forms
             dgvProductos.AllowUserToDeleteRows = false;
             dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProductos.MultiSelect = false;
+            dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dgvProductos.ColumnHeadersHeight = 35;
+            dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+
+            dgvProductos.EnableHeadersVisualStyles = false;
+
+            dgvProductos.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(30, 30, 30);
+            dgvProductos.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvProductos.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            dgvProductos.DefaultCellStyle.Font = new Font("Segoe UI", 9);
+            dgvProductos.RowTemplate.Height = 28;
         }
 
         private void CargarProductos()

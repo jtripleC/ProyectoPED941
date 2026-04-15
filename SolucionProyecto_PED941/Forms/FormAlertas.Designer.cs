@@ -28,35 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            dgvAlertas = new Guna.UI2.WinForms.Guna2DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvAlertas).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvAlertas
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 45;
-            dataGridView1.Size = new Size(800, 450);
-            dataGridView1.TabIndex = 0;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dgvAlertas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvAlertas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dgvAlertas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvAlertas.DefaultCellStyle = dataGridViewCellStyle6;
+            dgvAlertas.Dock = DockStyle.Fill;
+            dgvAlertas.GridColor = Color.FromArgb(231, 229, 255);
+            dgvAlertas.Location = new Point(0, 0);
+            dgvAlertas.Name = "dgvAlertas";
+            dgvAlertas.RowHeadersVisible = false;
+            dgvAlertas.Size = new Size(800, 397);
+            dgvAlertas.TabIndex = 0;
+            dgvAlertas.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvAlertas.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvAlertas.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvAlertas.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvAlertas.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvAlertas.ThemeStyle.BackColor = Color.White;
+            dgvAlertas.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvAlertas.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvAlertas.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvAlertas.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgvAlertas.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvAlertas.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAlertas.ThemeStyle.HeaderStyle.Height = 4;
+            dgvAlertas.ThemeStyle.ReadOnly = false;
+            dgvAlertas.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvAlertas.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvAlertas.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgvAlertas.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvAlertas.ThemeStyle.RowsStyle.Height = 25;
+            dgvAlertas.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvAlertas.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // FormAlertas
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(800, 397);
+            Controls.Add(dgvAlertas);
             Name = "FormAlertas";
             Text = "FormAlertas";
             Load += FormAlertas_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlertas).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvAlertas;
     }
 }

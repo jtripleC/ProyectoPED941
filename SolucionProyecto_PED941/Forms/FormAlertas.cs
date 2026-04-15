@@ -13,12 +13,21 @@ namespace SolucionProyecto_PED941.Forms
 
         private void FormAlertas_Load(object sender, EventArgs e)
         {
-            CargarAlertas();
-        }
+            dgvAlertas.DataSource = null;
+            dgvAlertas.DataSource = alertaService.ObtenerAlertasPriorizadas();
+            dgvAlertas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-        private void CargarAlertas()
-        {
-            dataGridView1.DataSource = alertaService.ObtenerAlertas();
+            dgvAlertas.ColumnHeadersHeight = 35;
+            dgvAlertas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+
+            dgvAlertas.EnableHeadersVisualStyles = false;
+
+            dgvAlertas.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(30, 30, 30);
+            dgvAlertas.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvAlertas.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            dgvAlertas.DefaultCellStyle.Font = new Font("Segoe UI", 9);
+            dgvAlertas.RowTemplate.Height = 28;
         }
-    }
+     }
 }
