@@ -61,12 +61,12 @@ database/
 
 ## Integrantes
 
-Melissa Jomeissy Sanchez Castro 
-Carlos Ernesto Contreras Bonilla
-Jorge Steven Moreno Hernandez 
-Oswaldo Alexander Henriquez Miranda 
-Estuardo Alejandro Henriquez Mejia 
-Juan Carlos Constanza Campos 
+- Melissa Jomeissy Sanchez Castro 
+- Carlos Ernesto Contreras Bonilla
+- Jorge Steven Moreno Hernandez 
+- Oswaldo Alexander Henriquez Miranda 
+- Estuardo Alejandro Henriquez Mejia 
+- Juan Carlos Constanza Campos 
 
 
 ---
