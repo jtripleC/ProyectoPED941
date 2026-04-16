@@ -65,7 +65,10 @@ namespace SolucionProyecto_PED941.Forms
             dgvProductos.DataSource = null;
             dgvProductos.DataSource = lista;
 
-            _hashProducto.Limpiar();
+            _hashProducto.Limpiar(); //Limpiamos el hash al ejecutar
+
+            /* Se insertan tambien en la estructura hash en memoria
+             * */
 
             foreach (var producto in lista)
             {
@@ -81,6 +84,11 @@ namespace SolucionProyecto_PED941.Forms
             {
                 if (!ValidarCampos())
                     return;
+
+                /*
+                 * Se construye el objeto producto
+                 * 
+                 */
 
                 var producto = new Producto
                 {
