@@ -68,27 +68,30 @@
             panelMenu.Dock = DockStyle.Left;
             panelMenu.FillColor = Color.FromArgb(31, 31, 46);
             panelMenu.Location = new Point(0, 0);
+            panelMenu.Margin = new Padding(3, 4, 3, 4);
             panelMenu.Name = "panelMenu";
             panelMenu.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            panelMenu.Size = new Size(220, 737);
+            panelMenu.Size = new Size(257, 983);
             panelMenu.TabIndex = 0;
             // 
             // btnAlertas
             // 
+            btnAlertas.BorderRadius = 10;
             btnAlertas.CustomizableEdges = customizableEdges1;
             btnAlertas.DisabledState.BorderColor = Color.DarkGray;
             btnAlertas.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAlertas.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAlertas.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAlertas.FillColor = SystemColors.ActiveCaption;
-            btnAlertas.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAlertas.FillColor = Color.DarkBlue;
+            btnAlertas.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
             btnAlertas.ForeColor = Color.White;
             btnAlertas.HoverState.FillColor = Color.FromArgb(46, 46, 62);
-            btnAlertas.Location = new Point(12, 357);
+            btnAlertas.Location = new Point(22, 604);
+            btnAlertas.Margin = new Padding(3, 4, 3, 4);
             btnAlertas.Name = "btnAlertas";
-            btnAlertas.Padding = new Padding(10, 0, 0, 0);
+            btnAlertas.Padding = new Padding(11, 0, 0, 0);
             btnAlertas.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnAlertas.Size = new Size(180, 45);
+            btnAlertas.Size = new Size(206, 60);
             btnAlertas.TabIndex = 5;
             btnAlertas.Text = "Alertas";
             btnAlertas.TextAlign = HorizontalAlignment.Left;
@@ -96,20 +99,22 @@
             // 
             // btnSalidas
             // 
+            btnSalidas.BorderRadius = 10;
             btnSalidas.CustomizableEdges = customizableEdges3;
             btnSalidas.DisabledState.BorderColor = Color.DarkGray;
             btnSalidas.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSalidas.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSalidas.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSalidas.FillColor = SystemColors.ActiveCaption;
-            btnSalidas.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSalidas.FillColor = Color.DarkBlue;
+            btnSalidas.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
             btnSalidas.ForeColor = Color.White;
             btnSalidas.HoverState.FillColor = Color.FromArgb(46, 46, 62);
-            btnSalidas.Location = new Point(12, 191);
+            btnSalidas.Location = new Point(22, 383);
+            btnSalidas.Margin = new Padding(3, 4, 3, 4);
             btnSalidas.Name = "btnSalidas";
-            btnSalidas.Padding = new Padding(10, 0, 0, 0);
+            btnSalidas.Padding = new Padding(11, 0, 0, 0);
             btnSalidas.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSalidas.Size = new Size(180, 45);
+            btnSalidas.Size = new Size(206, 60);
             btnSalidas.TabIndex = 4;
             btnSalidas.Text = "Salidas";
             btnSalidas.TextAlign = HorizontalAlignment.Left;
@@ -117,20 +122,22 @@
             // 
             // btnInventario
             // 
+            btnInventario.BorderRadius = 10;
             btnInventario.CustomizableEdges = customizableEdges5;
             btnInventario.DisabledState.BorderColor = Color.DarkGray;
             btnInventario.DisabledState.CustomBorderColor = Color.DarkGray;
             btnInventario.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnInventario.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnInventario.FillColor = SystemColors.ActiveCaption;
-            btnInventario.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnInventario.FillColor = Color.DarkBlue;
+            btnInventario.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
             btnInventario.ForeColor = Color.White;
             btnInventario.HoverState.FillColor = Color.FromArgb(46, 46, 62);
-            btnInventario.Location = new Point(12, 273);
+            btnInventario.Location = new Point(22, 492);
+            btnInventario.Margin = new Padding(3, 4, 3, 4);
             btnInventario.Name = "btnInventario";
-            btnInventario.Padding = new Padding(10, 0, 0, 0);
+            btnInventario.Padding = new Padding(11, 0, 0, 0);
             btnInventario.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnInventario.Size = new Size(180, 45);
+            btnInventario.Size = new Size(206, 60);
             btnInventario.TabIndex = 3;
             btnInventario.Text = "Inventario";
             btnInventario.TextAlign = HorizontalAlignment.Left;
@@ -138,20 +145,22 @@
             // 
             // btnEntradas
             // 
+            btnEntradas.BorderRadius = 10;
             btnEntradas.CustomizableEdges = customizableEdges7;
             btnEntradas.DisabledState.BorderColor = Color.DarkGray;
             btnEntradas.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEntradas.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnEntradas.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnEntradas.FillColor = SystemColors.ActiveCaption;
-            btnEntradas.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEntradas.FillColor = Color.DarkBlue;
+            btnEntradas.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
             btnEntradas.ForeColor = Color.White;
             btnEntradas.HoverState.FillColor = Color.FromArgb(46, 46, 62);
-            btnEntradas.Location = new Point(12, 100);
+            btnEntradas.Location = new Point(22, 261);
+            btnEntradas.Margin = new Padding(3, 4, 3, 4);
             btnEntradas.Name = "btnEntradas";
-            btnEntradas.Padding = new Padding(10, 0, 0, 0);
+            btnEntradas.Padding = new Padding(11, 0, 0, 0);
             btnEntradas.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnEntradas.Size = new Size(180, 45);
+            btnEntradas.Size = new Size(206, 60);
             btnEntradas.TabIndex = 2;
             btnEntradas.Text = "Entradas";
             btnEntradas.TextAlign = HorizontalAlignment.Left;
@@ -159,20 +168,22 @@
             // 
             // btnProductos
             // 
+            btnProductos.BorderRadius = 10;
             btnProductos.CustomizableEdges = customizableEdges9;
             btnProductos.DisabledState.BorderColor = Color.DarkGray;
             btnProductos.DisabledState.CustomBorderColor = Color.DarkGray;
             btnProductos.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnProductos.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnProductos.FillColor = SystemColors.ActiveCaption;
-            btnProductos.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnProductos.FillColor = Color.DarkBlue;
+            btnProductos.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnProductos.ForeColor = Color.White;
             btnProductos.HoverState.FillColor = Color.FromArgb(46, 46, 62);
-            btnProductos.Location = new Point(12, 12);
+            btnProductos.Location = new Point(22, 144);
+            btnProductos.Margin = new Padding(3, 4, 3, 4);
             btnProductos.Name = "btnProductos";
-            btnProductos.Padding = new Padding(10, 0, 0, 0);
+            btnProductos.Padding = new Padding(11, 0, 0, 0);
             btnProductos.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnProductos.Size = new Size(180, 48);
+            btnProductos.Size = new Size(206, 64);
             btnProductos.TabIndex = 1;
             btnProductos.Text = "Productos";
             btnProductos.TextAlign = HorizontalAlignment.Left;
@@ -184,19 +195,21 @@
             panelTop.CustomizableEdges = customizableEdges13;
             panelTop.Dock = DockStyle.Top;
             panelTop.FillColor = Color.White;
-            panelTop.Location = new Point(220, 0);
+            panelTop.Location = new Point(257, 0);
+            panelTop.Margin = new Padding(3, 4, 3, 4);
             panelTop.Name = "panelTop";
             panelTop.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            panelTop.Size = new Size(844, 60);
+            panelTop.Size = new Size(959, 80);
             panelTop.TabIndex = 1;
             // 
             // lblTitulo
             // 
             lblTitulo.BackColor = Color.Transparent;
-            lblTitulo.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(277, 12);
+            lblTitulo.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(317, 16);
+            lblTitulo.Margin = new Padding(3, 4, 3, 4);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(232, 27);
+            lblTitulo.Size = new Size(383, 43);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "SISTEMA DE INVENTARIO";
             // 
@@ -205,20 +218,22 @@
             panelContenedor.BackColor = Color.White;
             panelContenedor.CustomizableEdges = customizableEdges15;
             panelContenedor.Dock = DockStyle.Fill;
-            panelContenedor.Location = new Point(220, 60);
+            panelContenedor.Location = new Point(257, 80);
+            panelContenedor.Margin = new Padding(3, 4, 3, 4);
             panelContenedor.Name = "panelContenedor";
             panelContenedor.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            panelContenedor.Size = new Size(844, 677);
+            panelContenedor.Size = new Size(959, 903);
             panelContenedor.TabIndex = 2;
             // 
             // FormMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1064, 737);
+            ClientSize = new Size(1216, 983);
             Controls.Add(panelContenedor);
             Controls.Add(panelTop);
             Controls.Add(panelMenu);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormMain";
             Text = "FormMain";
             panelMenu.ResumeLayout(false);
