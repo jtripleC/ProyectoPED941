@@ -13,6 +13,7 @@ using SolucionProyecto_PED941.Utils;
 using SolucionProyecto_PED941.Structures;
 using SolucionProyecto_PED941.Services;
 
+
 namespace SolucionProyecto_PED941.Forms
 {
     public partial class FormProductos : Form
@@ -20,6 +21,7 @@ namespace SolucionProyecto_PED941.Forms
         private readonly ProductoRepository _productoRepository = new ProductoRepository();
         private readonly PilaOperaciones _pila = new PilaOperaciones();
         private readonly DeshacerService _deshacerService;
+        private readonly HashProducto _hashProducto = new HashProducto();
 
         public FormProductos()
         {
@@ -58,8 +60,20 @@ namespace SolucionProyecto_PED941.Forms
 
         private void CargarProductos()
         {
+            var lista = _productoRepository.ObtenerTodos();
+
             dgvProductos.DataSource = null;
-            dgvProductos.DataSource = _productoRepository.ObtenerTodos();
+            dgvProductos.DataSource = lista;
+
+            _hashProducto.Limpiar();
+
+            foreach (var producto in lista)
+            {
+                _hashProducto.Insertar(producto.Codigo, producto);
+            }
+
+            if (dgvProductos.Columns["Id"] != null)
+                dgvProductos.Columns["Id"].Visible = false;
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -175,6 +189,39 @@ namespace SolucionProyecto_PED941.Forms
             return true;
         }
 
-       
+        private void btnBuscarCodigo_Click(object sender, EventArgs e)
+        {
+            string codigo = txtBuscarCodigo.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(codigo))
+            {
+                MessageBox.Show("Ingrese un código para buscar.", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtBuscarCodigo.Focus();
+                return;
+            }
+
+            Producto? producto = _hashProducto.Buscar(codigo);
+
+            if (producto == null)
+            {
+                MessageBox.Show("Producto no encontrado.", "Búsqueda",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            dgvProductos.DataSource = null;
+            dgvProductos.DataSource = new List<Producto> { producto };
+
+            if (dgvProductos.Columns["Id"] != null)
+                dgvProductos.Columns["Id"].Visible = false;
+        }
+
+        private void btnMostrarTodos_Click(object sender, EventArgs e)
+        {
+            CargarProductos();
+        }
     }
 }
+
+
