@@ -229,6 +229,11 @@ namespace SolucionProyecto_PED941.Forms
         {
             CargarProductos();
         }
+
+        private void txtBuscarCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

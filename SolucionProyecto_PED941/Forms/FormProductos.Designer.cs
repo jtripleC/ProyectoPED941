@@ -92,12 +92,13 @@
             txtCodigo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtCodigo.Font = new Font("Segoe UI", 9F);
             txtCodigo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCodigo.Location = new Point(132, 152);
+            txtCodigo.Location = new Point(151, 203);
+            txtCodigo.Margin = new Padding(3, 5, 3, 5);
             txtCodigo.Name = "txtCodigo";
             txtCodigo.PlaceholderText = "PXXX";
             txtCodigo.SelectedText = "";
             txtCodigo.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtCodigo.Size = new Size(200, 36);
+            txtCodigo.Size = new Size(229, 48);
             txtCodigo.TabIndex = 0;
             // 
             // txtNombre
@@ -111,12 +112,13 @@
             txtNombre.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtNombre.Font = new Font("Segoe UI", 9F);
             txtNombre.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNombre.Location = new Point(132, 194);
+            txtNombre.Location = new Point(151, 259);
+            txtNombre.Margin = new Padding(3, 5, 3, 5);
             txtNombre.Name = "txtNombre";
             txtNombre.PlaceholderText = "Ingresar Nombre";
             txtNombre.SelectedText = "";
             txtNombre.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtNombre.Size = new Size(200, 36);
+            txtNombre.Size = new Size(229, 48);
             txtNombre.TabIndex = 1;
             // 
             // txtPrecio
@@ -130,12 +132,13 @@
             txtPrecio.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPrecio.Font = new Font("Segoe UI", 9F);
             txtPrecio.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPrecio.Location = new Point(132, 236);
+            txtPrecio.Location = new Point(151, 315);
+            txtPrecio.Margin = new Padding(3, 5, 3, 5);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.PlaceholderText = "Ingresar Precio";
             txtPrecio.SelectedText = "";
             txtPrecio.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtPrecio.Size = new Size(200, 36);
+            txtPrecio.Size = new Size(229, 48);
             txtPrecio.TabIndex = 2;
             // 
             // txtStock
@@ -149,12 +152,13 @@
             txtStock.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtStock.Font = new Font("Segoe UI", 9F);
             txtStock.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtStock.Location = new Point(132, 278);
+            txtStock.Location = new Point(151, 371);
+            txtStock.Margin = new Padding(3, 5, 3, 5);
             txtStock.Name = "txtStock";
             txtStock.PlaceholderText = "Cantidad de Stock";
             txtStock.SelectedText = "";
             txtStock.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtStock.Size = new Size(200, 36);
+            txtStock.Size = new Size(229, 48);
             txtStock.TabIndex = 3;
             // 
             // txtStockMinimo
@@ -168,12 +172,13 @@
             txtStockMinimo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtStockMinimo.Font = new Font("Segoe UI", 9F);
             txtStockMinimo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtStockMinimo.Location = new Point(132, 320);
+            txtStockMinimo.Location = new Point(151, 427);
+            txtStockMinimo.Margin = new Padding(3, 5, 3, 5);
             txtStockMinimo.Name = "txtStockMinimo";
             txtStockMinimo.PlaceholderText = "Stock Minimo Alerta";
             txtStockMinimo.SelectedText = "";
             txtStockMinimo.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtStockMinimo.Size = new Size(200, 36);
+            txtStockMinimo.Size = new Size(229, 48);
             txtStockMinimo.TabIndex = 4;
             // 
             // btnGuardar
@@ -185,10 +190,11 @@
             btnGuardar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnGuardar.Font = new Font("Segoe UI", 9F);
             btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(132, 375);
+            btnGuardar.Location = new Point(224, 521);
+            btnGuardar.Margin = new Padding(3, 4, 3, 4);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnGuardar.Size = new Size(200, 45);
+            btnGuardar.Size = new Size(156, 34);
             btnGuardar.TabIndex = 5;
             btnGuardar.Text = "Guardar";
             btnGuardar.Click += btnGuardar_Click;
@@ -202,10 +208,11 @@
             btnLimpiar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnLimpiar.Font = new Font("Segoe UI", 9F);
             btnLimpiar.ForeColor = Color.White;
-            btnLimpiar.Location = new Point(132, 438);
+            btnLimpiar.Location = new Point(29, 521);
+            btnLimpiar.Margin = new Padding(3, 4, 3, 4);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnLimpiar.Size = new Size(200, 45);
+            btnLimpiar.Size = new Size(156, 34);
             btnLimpiar.TabIndex = 6;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.Click += btnLimpiar_Click;
@@ -213,50 +220,51 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(44, 162);
+            label1.Location = new Point(50, 216);
             label1.Name = "label1";
-            label1.Size = new Size(46, 15);
+            label1.Size = new Size(58, 20);
             label1.TabIndex = 7;
             label1.Text = "Código";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(44, 204);
+            label2.Location = new Point(50, 272);
             label2.Name = "label2";
-            label2.Size = new Size(51, 15);
+            label2.Size = new Size(64, 20);
             label2.TabIndex = 8;
             label2.Text = "Nombre";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(44, 246);
+            label3.Location = new Point(50, 328);
             label3.Name = "label3";
-            label3.Size = new Size(40, 15);
+            label3.Size = new Size(50, 20);
             label3.TabIndex = 9;
             label3.Text = "Precio";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(44, 288);
+            label4.Location = new Point(50, 384);
             label4.Name = "label4";
-            label4.Size = new Size(36, 15);
+            label4.Size = new Size(45, 20);
             label4.TabIndex = 10;
             label4.Text = "Stock";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(44, 331);
+            label5.Location = new Point(50, 441);
             label5.Name = "label5";
-            label5.Size = new Size(81, 15);
+            label5.Size = new Size(100, 20);
             label5.TabIndex = 11;
             label5.Text = "Stock Minimo";
             // 
             // btnDeshacer
             // 
+            btnDeshacer.BorderRadius = 10;
             btnDeshacer.CustomizableEdges = customizableEdges15;
             btnDeshacer.DisabledState.BorderColor = Color.DarkGray;
             btnDeshacer.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -265,10 +273,11 @@
             btnDeshacer.FillColor = Color.Red;
             btnDeshacer.Font = new Font("Segoe UI", 9F);
             btnDeshacer.ForeColor = Color.White;
-            btnDeshacer.Location = new Point(132, 506);
+            btnDeshacer.Location = new Point(95, 585);
+            btnDeshacer.Margin = new Padding(3, 4, 3, 4);
             btnDeshacer.Name = "btnDeshacer";
             btnDeshacer.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnDeshacer.Size = new Size(200, 45);
+            btnDeshacer.Size = new Size(229, 37);
             btnDeshacer.TabIndex = 13;
             btnDeshacer.Text = "Deshacer Última Operación";
             btnDeshacer.Click += btnDeshacer_Click;
@@ -295,44 +304,49 @@
             panelIzquierdo.CustomizableEdges = customizableEdges23;
             panelIzquierdo.Dock = DockStyle.Left;
             panelIzquierdo.Location = new Point(0, 0);
+            panelIzquierdo.Margin = new Padding(3, 4, 3, 4);
             panelIzquierdo.Name = "panelIzquierdo";
-            panelIzquierdo.Padding = new Padding(15);
+            panelIzquierdo.Padding = new Padding(17, 20, 17, 20);
             panelIzquierdo.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            panelIzquierdo.Size = new Size(350, 561);
+            panelIzquierdo.Size = new Size(400, 646);
             panelIzquierdo.TabIndex = 14;
             // 
             // btnMostrarTodos
             // 
+            btnMostrarTodos.BorderRadius = 10;
             btnMostrarTodos.CustomizableEdges = customizableEdges17;
             btnMostrarTodos.DisabledState.BorderColor = Color.DarkGray;
             btnMostrarTodos.DisabledState.CustomBorderColor = Color.DarkGray;
             btnMostrarTodos.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnMostrarTodos.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnMostrarTodos.FillColor = SystemColors.HotTrack;
+            btnMostrarTodos.FillColor = Color.Navy;
             btnMostrarTodos.Font = new Font("Segoe UI", 9F);
             btnMostrarTodos.ForeColor = Color.White;
-            btnMostrarTodos.Location = new Point(176, 52);
+            btnMostrarTodos.Location = new Point(241, 83);
+            btnMostrarTodos.Margin = new Padding(3, 4, 3, 4);
             btnMostrarTodos.Name = "btnMostrarTodos";
             btnMostrarTodos.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            btnMostrarTodos.Size = new Size(113, 45);
+            btnMostrarTodos.Size = new Size(129, 60);
             btnMostrarTodos.TabIndex = 16;
             btnMostrarTodos.Text = "Mostrar Todos";
             btnMostrarTodos.Click += btnMostrarTodos_Click;
             // 
             // btnBuscarCodigo
             // 
+            btnBuscarCodigo.BorderRadius = 10;
             btnBuscarCodigo.CustomizableEdges = customizableEdges19;
             btnBuscarCodigo.DisabledState.BorderColor = Color.DarkGray;
             btnBuscarCodigo.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBuscarCodigo.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnBuscarCodigo.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBuscarCodigo.FillColor = SystemColors.HotTrack;
+            btnBuscarCodigo.FillColor = Color.Navy;
             btnBuscarCodigo.Font = new Font("Segoe UI", 9F);
             btnBuscarCodigo.ForeColor = Color.White;
-            btnBuscarCodigo.Location = new Point(12, 52);
+            btnBuscarCodigo.Location = new Point(12, 83);
+            btnBuscarCodigo.Margin = new Padding(3, 4, 3, 4);
             btnBuscarCodigo.Name = "btnBuscarCodigo";
             btnBuscarCodigo.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            btnBuscarCodigo.Size = new Size(113, 45);
+            btnBuscarCodigo.Size = new Size(129, 60);
             btnBuscarCodigo.TabIndex = 15;
             btnBuscarCodigo.Text = "Buscar Código";
             btnBuscarCodigo.Click += btnBuscarCodigo_Click;
@@ -348,13 +362,15 @@
             txtBuscarCodigo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtBuscarCodigo.Font = new Font("Segoe UI", 9F);
             txtBuscarCodigo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtBuscarCodigo.Location = new Point(12, 10);
+            txtBuscarCodigo.Location = new Point(95, 13);
+            txtBuscarCodigo.Margin = new Padding(3, 5, 3, 5);
             txtBuscarCodigo.Name = "txtBuscarCodigo";
             txtBuscarCodigo.PlaceholderText = "Ingresar código";
             txtBuscarCodigo.SelectedText = "";
             txtBuscarCodigo.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            txtBuscarCodigo.Size = new Size(113, 36);
+            txtBuscarCodigo.Size = new Size(177, 48);
             txtBuscarCodigo.TabIndex = 14;
+            txtBuscarCodigo.TextChanged += txtBuscarCodigo_TextChanged;
             // 
             // panelDerecho
             // 
@@ -362,11 +378,12 @@
             panelDerecho.Controls.Add(dgvProductos);
             panelDerecho.CustomizableEdges = customizableEdges25;
             panelDerecho.Dock = DockStyle.Fill;
-            panelDerecho.Location = new Point(350, 0);
+            panelDerecho.Location = new Point(400, 0);
+            panelDerecho.Margin = new Padding(3, 4, 3, 4);
             panelDerecho.Name = "panelDerecho";
-            panelDerecho.Padding = new Padding(10);
+            panelDerecho.Padding = new Padding(11, 13, 11, 13);
             panelDerecho.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            panelDerecho.Size = new Size(642, 561);
+            panelDerecho.Size = new Size(734, 646);
             panelDerecho.TabIndex = 15;
             // 
             // dgvProductos
@@ -394,10 +411,13 @@
             dgvProductos.DefaultCellStyle = dataGridViewCellStyle3;
             dgvProductos.Dock = DockStyle.Fill;
             dgvProductos.GridColor = Color.FromArgb(231, 229, 255);
-            dgvProductos.Location = new Point(10, 10);
+            dgvProductos.Location = new Point(11, 13);
+            dgvProductos.Margin = new Padding(3, 4, 3, 4);
             dgvProductos.Name = "dgvProductos";
             dgvProductos.RowHeadersVisible = false;
-            dgvProductos.Size = new Size(622, 541);
+            dgvProductos.RowHeadersWidth = 51;
+            dgvProductos.RowTemplate.Height = 25;
+            dgvProductos.Size = new Size(712, 620);
             dgvProductos.TabIndex = 13;
             dgvProductos.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvProductos.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -423,11 +443,12 @@
             // 
             // FormProductos
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(992, 561);
+            ClientSize = new Size(1134, 646);
             Controls.Add(panelDerecho);
             Controls.Add(panelIzquierdo);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormProductos";
             Text = "FormProductos";
             Load += FormProductos_Load;
