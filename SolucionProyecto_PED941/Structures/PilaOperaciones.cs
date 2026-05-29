@@ -7,7 +7,7 @@ using SolucionProyecto_PED941.Models;
 
 namespace SolucionProyecto_PED941.Structures
 {
-    internal class PilaOperaciones
+    public class PilaOperaciones
     {
         private Stack<OperacionDeshacer> pila = new Stack<OperacionDeshacer>();
 
