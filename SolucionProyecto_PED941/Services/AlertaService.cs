@@ -8,26 +8,21 @@ namespace SolucionProyecto_PED941.Services
     public class AlertaService
     {
         private readonly ProductoRepository _productoRepository = new();
-        private readonly ColaPrioridadStock _cola = new();
+        private readonly HeapStock _heap = new(); 
 
         public List<AlertaStock> ObtenerAlertasPriorizadas()
         {
-            _cola.Limpiar();
+            _heap.Limpiar();
 
             var productos = _productoRepository.ObtenerStockBajo();
 
             foreach (var producto in productos)
             {
-                int prioridad;
+                int prioridad = producto.Stock == 0 ? 1
+                              : producto.Stock < producto.StockMinimo ? 2
+                              : 3;
 
-                if (producto.Stock == 0)
-                    prioridad = 1;
-                else if (producto.Stock < producto.StockMinimo)
-                    prioridad = 2;
-                else
-                    prioridad = 3;
-
-                _cola.Insertar(new AlertaStock
+                _heap.Insertar(new AlertaStock
                 {
                     Codigo = producto.Codigo,
                     Nombre = producto.Nombre,
@@ -37,7 +32,7 @@ namespace SolucionProyecto_PED941.Services
                 });
             }
 
-            return _cola.ObtenerTodas();
+            return _heap.ObtenerTodas();
         }
     }
 }

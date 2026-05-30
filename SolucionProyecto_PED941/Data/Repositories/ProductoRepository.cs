@@ -36,6 +36,7 @@ namespace SolucionProyecto_PED941.Data.Repositories
 
             const string sql = "SELECT Id, Codigo, Nombre, Precio, Stock, StockMinimo FROM Productos";
 
+
             using var cmd = new MySqlCommand(sql, conexion);
             using var reader = cmd.ExecuteReader();
 
@@ -95,6 +96,63 @@ namespace SolucionProyecto_PED941.Data.Repositories
             using var cmd = new MySqlCommand(sql, conexion);
             cmd.Parameters.AddWithValue("@Stock", nuevoStock);
             cmd.Parameters.AddWithValue("@Id", productoId);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void Actualizar(Producto producto)
+        {
+            using var conexion = _conexionDb.CrearConexion();
+            conexion.Open();
+
+            const string sql = @"UPDATE Productos 
+                         SET Codigo = @Codigo, Nombre = @Nombre, 
+                             Precio = @Precio, StockMinimo = @StockMinimo
+                         WHERE Id = @Id";
+
+            using var cmd = new MySqlCommand(sql, conexion);
+            cmd.Parameters.AddWithValue("@Codigo", producto.Codigo);
+            cmd.Parameters.AddWithValue("@Nombre", producto.Nombre);
+            cmd.Parameters.AddWithValue("@Precio", producto.Precio);
+            cmd.Parameters.AddWithValue("@StockMinimo", producto.StockMinimo);
+            cmd.Parameters.AddWithValue("@Id", producto.Id);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public bool ExisteCodigoONombre(string codigo, string nombre, int excludeId)
+        {
+            using var conexion = _conexionDb.CrearConexion();
+            conexion.Open();
+
+            const string sql = @"SELECT COUNT(*) FROM Productos 
+                         WHERE (Codigo = @Codigo OR Nombre = @Nombre) 
+                         AND Id <> @Id";
+
+            using var cmd = new MySqlCommand(sql, conexion);
+            cmd.Parameters.AddWithValue("@Codigo", codigo.Trim());
+            cmd.Parameters.AddWithValue("@Nombre", nombre.Trim());
+            cmd.Parameters.AddWithValue("@Id", excludeId);
+
+            return Convert.ToInt32(cmd.ExecuteScalar()) > 0;
+        }
+
+        public void Reinsertar(Producto producto)
+        {
+            using var conexion = _conexionDb.CrearConexion();
+            conexion.Open();
+
+            const string sql = @"INSERT INTO Productos 
+                        (Codigo, Nombre, Precio, Stock, StockMinimo)
+                        VALUES
+                        (@Codigo, @Nombre, @Precio, @Stock, @StockMinimo)";
+
+            using var cmd = new MySqlCommand(sql, conexion);
+            cmd.Parameters.AddWithValue("@Codigo", producto.Codigo);
+            cmd.Parameters.AddWithValue("@Nombre", producto.Nombre);
+            cmd.Parameters.AddWithValue("@Precio", producto.Precio);
+            cmd.Parameters.AddWithValue("@Stock", producto.Stock);
+            cmd.Parameters.AddWithValue("@StockMinimo", producto.StockMinimo);
 
             cmd.ExecuteNonQuery();
         }
