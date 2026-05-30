@@ -2,30 +2,17 @@
 {
     partial class FormProductos
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -44,19 +31,20 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dgvStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dgvStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dgvStyle3 = new DataGridViewCellStyle();
+
             txtCodigo = new Guna.UI2.WinForms.Guna2TextBox();
             txtNombre = new Guna.UI2.WinForms.Guna2TextBox();
             txtPrecio = new Guna.UI2.WinForms.Guna2TextBox();
@@ -76,13 +64,15 @@
             txtBuscarCodigo = new Guna.UI2.WinForms.Guna2TextBox();
             panelDerecho = new Guna.UI2.WinForms.Guna2Panel();
             dgvProductos = new Guna.UI2.WinForms.Guna2DataGridView();
+            btnEditar = new Guna.UI2.WinForms.Guna2Button();
+            btnEliminar = new Guna.UI2.WinForms.Guna2Button();
+
             panelIzquierdo.SuspendLayout();
             panelDerecho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             SuspendLayout();
-            // 
+
             // txtCodigo
-            // 
             txtCodigo.CustomizableEdges = customizableEdges1;
             txtCodigo.DefaultText = "";
             txtCodigo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -100,9 +90,8 @@
             txtCodigo.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtCodigo.Size = new Size(229, 48);
             txtCodigo.TabIndex = 0;
-            // 
+
             // txtNombre
-            // 
             txtNombre.CustomizableEdges = customizableEdges3;
             txtNombre.DefaultText = "";
             txtNombre.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -120,9 +109,8 @@
             txtNombre.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtNombre.Size = new Size(229, 48);
             txtNombre.TabIndex = 1;
-            // 
+
             // txtPrecio
-            // 
             txtPrecio.CustomizableEdges = customizableEdges5;
             txtPrecio.DefaultText = "";
             txtPrecio.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -140,9 +128,8 @@
             txtPrecio.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtPrecio.Size = new Size(229, 48);
             txtPrecio.TabIndex = 2;
-            // 
+
             // txtStock
-            // 
             txtStock.CustomizableEdges = customizableEdges7;
             txtStock.DefaultText = "";
             txtStock.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -160,9 +147,8 @@
             txtStock.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtStock.Size = new Size(229, 48);
             txtStock.TabIndex = 3;
-            // 
+
             // txtStockMinimo
-            // 
             txtStockMinimo.CustomizableEdges = customizableEdges9;
             txtStockMinimo.DefaultText = "";
             txtStockMinimo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -180,90 +166,82 @@
             txtStockMinimo.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtStockMinimo.Size = new Size(229, 48);
             txtStockMinimo.TabIndex = 4;
-            // 
+
             // btnGuardar
-            // 
+            btnGuardar.BorderRadius = 10;
             btnGuardar.CustomizableEdges = customizableEdges11;
             btnGuardar.DisabledState.BorderColor = Color.DarkGray;
             btnGuardar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnGuardar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnGuardar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnGuardar.FillColor = Color.Navy;
             btnGuardar.Font = new Font("Segoe UI", 9F);
             btnGuardar.ForeColor = Color.White;
             btnGuardar.Location = new Point(224, 521);
             btnGuardar.Margin = new Padding(3, 4, 3, 4);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnGuardar.Size = new Size(156, 34);
+            btnGuardar.Size = new Size(156, 37);
             btnGuardar.TabIndex = 5;
             btnGuardar.Text = "Guardar";
             btnGuardar.Click += btnGuardar_Click;
-            // 
+
             // btnLimpiar
-            // 
+            btnLimpiar.BorderRadius = 10;
             btnLimpiar.CustomizableEdges = customizableEdges13;
             btnLimpiar.DisabledState.BorderColor = Color.DarkGray;
             btnLimpiar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLimpiar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnLimpiar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLimpiar.FillColor = Color.Navy;
             btnLimpiar.Font = new Font("Segoe UI", 9F);
             btnLimpiar.ForeColor = Color.White;
             btnLimpiar.Location = new Point(29, 521);
             btnLimpiar.Margin = new Padding(3, 4, 3, 4);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnLimpiar.Size = new Size(156, 34);
+            btnLimpiar.Size = new Size(156, 37);
             btnLimpiar.TabIndex = 6;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.Click += btnLimpiar_Click;
-            // 
-            // label1
-            // 
+
+            // labels
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F);
             label1.Location = new Point(50, 216);
             label1.Name = "label1";
-            label1.Size = new Size(58, 20);
             label1.TabIndex = 7;
             label1.Text = "Código";
-            // 
-            // label2
-            // 
+
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F);
             label2.Location = new Point(50, 272);
             label2.Name = "label2";
-            label2.Size = new Size(64, 20);
             label2.TabIndex = 8;
             label2.Text = "Nombre";
-            // 
-            // label3
-            // 
+
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F);
             label3.Location = new Point(50, 328);
             label3.Name = "label3";
-            label3.Size = new Size(50, 20);
             label3.TabIndex = 9;
             label3.Text = "Precio";
-            // 
-            // label4
-            // 
+
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F);
             label4.Location = new Point(50, 384);
             label4.Name = "label4";
-            label4.Size = new Size(45, 20);
             label4.TabIndex = 10;
             label4.Text = "Stock";
-            // 
-            // label5
-            // 
+
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F);
             label5.Location = new Point(50, 441);
             label5.Name = "label5";
-            label5.Size = new Size(100, 20);
             label5.TabIndex = 11;
             label5.Text = "Stock Minimo";
-            // 
+
             // btnDeshacer
-            // 
             btnDeshacer.BorderRadius = 10;
             btnDeshacer.CustomizableEdges = customizableEdges15;
             btnDeshacer.DisabledState.BorderColor = Color.DarkGray;
@@ -273,7 +251,7 @@
             btnDeshacer.FillColor = Color.Red;
             btnDeshacer.Font = new Font("Segoe UI", 9F);
             btnDeshacer.ForeColor = Color.White;
-            btnDeshacer.Location = new Point(95, 585);
+            btnDeshacer.Location = new Point(95, 640);
             btnDeshacer.Margin = new Padding(3, 4, 3, 4);
             btnDeshacer.Name = "btnDeshacer";
             btnDeshacer.ShadowDecoration.CustomizableEdges = customizableEdges16;
@@ -281,38 +259,34 @@
             btnDeshacer.TabIndex = 13;
             btnDeshacer.Text = "Deshacer Última Operación";
             btnDeshacer.Click += btnDeshacer_Click;
-            // 
-            // panelIzquierdo
-            // 
-            panelIzquierdo.BackColor = Color.White;
-            panelIzquierdo.Controls.Add(btnMostrarTodos);
-            panelIzquierdo.Controls.Add(btnBuscarCodigo);
-            panelIzquierdo.Controls.Add(txtBuscarCodigo);
-            panelIzquierdo.Controls.Add(btnDeshacer);
-            panelIzquierdo.Controls.Add(txtCodigo);
-            panelIzquierdo.Controls.Add(txtNombre);
-            panelIzquierdo.Controls.Add(label5);
-            panelIzquierdo.Controls.Add(txtPrecio);
-            panelIzquierdo.Controls.Add(label4);
-            panelIzquierdo.Controls.Add(txtStock);
-            panelIzquierdo.Controls.Add(label3);
-            panelIzquierdo.Controls.Add(txtStockMinimo);
-            panelIzquierdo.Controls.Add(label2);
-            panelIzquierdo.Controls.Add(btnGuardar);
-            panelIzquierdo.Controls.Add(label1);
-            panelIzquierdo.Controls.Add(btnLimpiar);
-            panelIzquierdo.CustomizableEdges = customizableEdges23;
-            panelIzquierdo.Dock = DockStyle.Left;
-            panelIzquierdo.Location = new Point(0, 0);
-            panelIzquierdo.Margin = new Padding(3, 4, 3, 4);
-            panelIzquierdo.Name = "panelIzquierdo";
-            panelIzquierdo.Padding = new Padding(17, 20, 17, 20);
-            panelIzquierdo.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            panelIzquierdo.Size = new Size(400, 646);
-            panelIzquierdo.TabIndex = 14;
-            // 
+
+            // btnEditar
+            btnEditar.BorderRadius = 10;
+            btnEditar.FillColor = Color.FromArgb(0, 150, 100);
+            btnEditar.Font = new Font("Segoe UI", 9F);
+            btnEditar.ForeColor = Color.White;
+            btnEditar.Location = new Point(29, 565);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(156, 37);
+            btnEditar.TabIndex = 17;
+            btnEditar.Text = "Editar Producto";
+            btnEditar.Visible = false;
+            btnEditar.Click += btnEditar_Click;
+
+            // btnEliminar
+            btnEliminar.BorderRadius = 10;
+            btnEliminar.FillColor = Color.FromArgb(200, 50, 50);
+            btnEliminar.Font = new Font("Segoe UI", 9F);
+            btnEliminar.ForeColor = Color.White;
+            btnEliminar.Location = new Point(224, 565);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(156, 37);
+            btnEliminar.TabIndex = 18;
+            btnEliminar.Text = "Eliminar Producto";
+            btnEliminar.Visible = false;
+            btnEliminar.Click += btnEliminar_Click;
+
             // btnMostrarTodos
-            // 
             btnMostrarTodos.BorderRadius = 10;
             btnMostrarTodos.CustomizableEdges = customizableEdges17;
             btnMostrarTodos.DisabledState.BorderColor = Color.DarkGray;
@@ -330,9 +304,8 @@
             btnMostrarTodos.TabIndex = 16;
             btnMostrarTodos.Text = "Mostrar Todos";
             btnMostrarTodos.Click += btnMostrarTodos_Click;
-            // 
+
             // btnBuscarCodigo
-            // 
             btnBuscarCodigo.BorderRadius = 10;
             btnBuscarCodigo.CustomizableEdges = customizableEdges19;
             btnBuscarCodigo.DisabledState.BorderColor = Color.DarkGray;
@@ -350,9 +323,8 @@
             btnBuscarCodigo.TabIndex = 15;
             btnBuscarCodigo.Text = "Buscar Código";
             btnBuscarCodigo.Click += btnBuscarCodigo_Click;
-            // 
+
             // txtBuscarCodigo
-            // 
             txtBuscarCodigo.CustomizableEdges = customizableEdges21;
             txtBuscarCodigo.DefaultText = "";
             txtBuscarCodigo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -371,9 +343,38 @@
             txtBuscarCodigo.Size = new Size(177, 48);
             txtBuscarCodigo.TabIndex = 14;
             txtBuscarCodigo.TextChanged += txtBuscarCodigo_TextChanged;
-            // 
+
+            // panelIzquierdo
+            panelIzquierdo.BackColor = Color.White;
+            panelIzquierdo.Controls.Add(btnMostrarTodos);
+            panelIzquierdo.Controls.Add(btnBuscarCodigo);
+            panelIzquierdo.Controls.Add(txtBuscarCodigo);
+            panelIzquierdo.Controls.Add(btnDeshacer);
+            panelIzquierdo.Controls.Add(txtCodigo);
+            panelIzquierdo.Controls.Add(txtNombre);
+            panelIzquierdo.Controls.Add(label5);
+            panelIzquierdo.Controls.Add(txtPrecio);
+            panelIzquierdo.Controls.Add(label4);
+            panelIzquierdo.Controls.Add(txtStock);
+            panelIzquierdo.Controls.Add(label3);
+            panelIzquierdo.Controls.Add(txtStockMinimo);
+            panelIzquierdo.Controls.Add(label2);
+            panelIzquierdo.Controls.Add(btnGuardar);
+            panelIzquierdo.Controls.Add(label1);
+            panelIzquierdo.Controls.Add(btnLimpiar);
+            panelIzquierdo.Controls.Add(btnEditar);
+            panelIzquierdo.Controls.Add(btnEliminar);
+            panelIzquierdo.CustomizableEdges = customizableEdges23;
+            panelIzquierdo.Dock = DockStyle.Left;
+            panelIzquierdo.Location = new Point(0, 0);
+            panelIzquierdo.Margin = new Padding(3, 4, 3, 4);
+            panelIzquierdo.Name = "panelIzquierdo";
+            panelIzquierdo.Padding = new Padding(17, 20, 17, 20);
+            panelIzquierdo.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            panelIzquierdo.Size = new Size(400, 646);
+            panelIzquierdo.TabIndex = 14;
+
             // panelDerecho
-            // 
             panelDerecho.BackColor = Color.White;
             panelDerecho.Controls.Add(dgvProductos);
             panelDerecho.CustomizableEdges = customizableEdges25;
@@ -385,30 +386,35 @@
             panelDerecho.ShadowDecoration.CustomizableEdges = customizableEdges26;
             panelDerecho.Size = new Size(734, 646);
             panelDerecho.TabIndex = 15;
-            // 
+
             // dgvProductos
-            // 
+            dgvProductos.AllowUserToAddRows = false;
+            dgvProductos.AllowUserToDeleteRows = false;
+            dgvProductos.AllowUserToResizeRows = false;
             dgvProductos.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dgvProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvProductos.ColumnHeadersHeight = 4;
+            dgvProductos.ReadOnly = true;
+            dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProductos.MultiSelect = false;
+            dgvStyle1.BackColor = Color.White;
+            dgvProductos.AlternatingRowsDefaultCellStyle = dgvStyle1;
+            dgvStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dgvStyle2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dgvStyle2.ForeColor = Color.White;
+            dgvStyle2.SelectionBackColor = Color.FromArgb(100, 88, 255);
+            dgvStyle2.SelectionForeColor = Color.White;
+            dgvStyle2.WrapMode = DataGridViewTriState.True;
+            dgvProductos.ColumnHeadersDefaultCellStyle = dgvStyle2;
+            dgvProductos.ColumnHeadersHeight = 40;
             dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvProductos.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dgvStyle3.BackColor = Color.White;
+            dgvStyle3.Font = new Font("Segoe UI", 9F);
+            dgvStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvStyle3.WrapMode = DataGridViewTriState.False;
+            dgvProductos.DefaultCellStyle = dgvStyle3;
             dgvProductos.Dock = DockStyle.Fill;
             dgvProductos.GridColor = Color.FromArgb(231, 229, 255);
             dgvProductos.Location = new Point(11, 13);
@@ -416,33 +422,30 @@
             dgvProductos.Name = "dgvProductos";
             dgvProductos.RowHeadersVisible = false;
             dgvProductos.RowHeadersWidth = 51;
-            dgvProductos.RowTemplate.Height = 25;
+            dgvProductos.RowTemplate.Height = 35;
             dgvProductos.Size = new Size(712, 620);
             dgvProductos.TabIndex = 13;
             dgvProductos.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            dgvProductos.ThemeStyle.AlternatingRowsStyle.Font = null;
-            dgvProductos.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            dgvProductos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            dgvProductos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvProductos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.White;
+            dgvProductos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgvProductos.ThemeStyle.BackColor = Color.White;
             dgvProductos.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             dgvProductos.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
             dgvProductos.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvProductos.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgvProductos.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             dgvProductos.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             dgvProductos.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvProductos.ThemeStyle.HeaderStyle.Height = 4;
-            dgvProductos.ThemeStyle.ReadOnly = false;
+            dgvProductos.ThemeStyle.HeaderStyle.Height = 40;
+            dgvProductos.ThemeStyle.ReadOnly = true;
             dgvProductos.ThemeStyle.RowsStyle.BackColor = Color.White;
             dgvProductos.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvProductos.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
             dgvProductos.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            dgvProductos.ThemeStyle.RowsStyle.Height = 25;
+            dgvProductos.ThemeStyle.RowsStyle.Height = 35;
             dgvProductos.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvProductos.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            // 
+
             // FormProductos
-            // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1134, 646);
@@ -452,6 +455,7 @@
             Name = "FormProductos";
             Text = "FormProductos";
             Load += FormProductos_Load;
+
             panelIzquierdo.ResumeLayout(false);
             panelIzquierdo.PerformLayout();
             panelDerecho.ResumeLayout(false);
@@ -480,5 +484,7 @@
         private Guna.UI2.WinForms.Guna2Button btnBuscarCodigo;
         private Guna.UI2.WinForms.Guna2TextBox txtBuscarCodigo;
         private Guna.UI2.WinForms.Guna2Button btnMostrarTodos;
+        private Guna.UI2.WinForms.Guna2Button btnEditar;
+        private Guna.UI2.WinForms.Guna2Button btnEliminar;
     }
 }

@@ -7,14 +7,159 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SolucionProyecto_PED941.Data.Repositories;
+using SolucionProyecto_PED941.Models;
+using SolucionProyecto_PED941.Structures;
+using SolucionProyecto_PED941.Services;
 
 namespace SolucionProyecto_PED941.Forms
 {
     public partial class FormEntradas : Form
     {
+        private readonly ProductoRepository _productoRepository = new ProductoRepository();
+        private readonly MovimientoRepository _movimientoRepository = new MovimientoRepository();
+        private readonly PilaOperaciones _pila = PilasSession.PilaEntradas;
+        private readonly DeshacerService _deshacerService;
+        private readonly HashProducto _hashProducto = new HashProducto();
+
         public FormEntradas()
         {
             InitializeComponent();
+            _deshacerService = new DeshacerService(_pila);
+        }
+
+        private void FormEntradas_Load(object sender, EventArgs e)
+        {
+            CargarProductosEnCombo();
+            CargarMovimientos();
+        }
+
+        private void CargarProductosEnCombo()
+        {
+            var productos = _productoRepository.ObtenerTodos();
+
+            _hashProducto.Limpiar();
+            foreach (var p in productos)
+                _hashProducto.Insertar(p.Codigo, p);
+
+            cmbProducto.DataSource = productos;
+            cmbProducto.DisplayMember = "Nombre";
+            cmbProducto.ValueMember = "Id";
+        }
+
+        private void CargarMovimientos()
+        {
+            var movimientos = _movimientoRepository.ObtenerTodos()
+                .Where(m => m.TipoMovimiento == "ENTRADA")
+                .ToList();
+
+            dgvMovimientos.DataSource = null;
+            dgvMovimientos.DataSource = movimientos;
+
+            if (dgvMovimientos.Columns["Id"] != null)
+                dgvMovimientos.Columns["Id"].Visible = false;
+            if (dgvMovimientos.Columns["ProductoId"] != null)
+                dgvMovimientos.Columns["ProductoId"].Visible = false;
+            if (dgvMovimientos.Columns["TipoMovimiento"] != null)
+                dgvMovimientos.Columns["TipoMovimiento"].Visible = false;
+
+            if (dgvMovimientos.Columns["CodigoProducto"] != null)
+                dgvMovimientos.Columns["CodigoProducto"].HeaderText = "Código";
+            if (dgvMovimientos.Columns["NombreProducto"] != null)
+                dgvMovimientos.Columns["NombreProducto"].HeaderText = "Producto";
+            if (dgvMovimientos.Columns["Cantidad"] != null)
+                dgvMovimientos.Columns["Cantidad"].HeaderText = "Cantidad";
+            if (dgvMovimientos.Columns["StockAnterior"] != null)
+                dgvMovimientos.Columns["StockAnterior"].HeaderText = "Stock Anterior";
+            if (dgvMovimientos.Columns["StockResultante"] != null)
+                dgvMovimientos.Columns["StockResultante"].HeaderText = "Stock Nuevo";
+            if (dgvMovimientos.Columns["Fecha"] != null)
+            {
+                dgvMovimientos.Columns["Fecha"].HeaderText = "Fecha";
+                dgvMovimientos.Columns["Fecha"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
+            }
+        }
+
+        private void btnRegistrarEntrada_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbProducto.SelectedItem is not Producto productoSeleccionado)
+                {
+                    MessageBox.Show("Seleccione un producto.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!int.TryParse(txtCantidad.Text.Trim(), out int cantidad) || cantidad <= 0)
+                {
+                    MessageBox.Show("Ingrese una cantidad válida (mayor a 0).", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCantidad.Focus();
+                    return;
+                }
+
+                int stockAnterior = productoSeleccionado.Stock;
+                int stockNuevo = stockAnterior + cantidad;
+
+                _productoRepository.ActualizarStock(productoSeleccionado.Id, stockNuevo);
+
+                var movimiento = new Movimiento
+                {
+                    ProductoId = productoSeleccionado.Id,
+                    TipoMovimiento = "ENTRADA",
+                    Cantidad = cantidad,
+                    StockAnterior = stockAnterior,
+                    StockResultante = stockNuevo,
+                    Fecha = DateTime.Now
+                };
+
+                _movimientoRepository.Insertar(movimiento);
+
+                _pila.Push(new OperacionDeshacer
+                {
+                    ProductoId = productoSeleccionado.Id,
+                    Cantidad = cantidad,
+                    StockAnterior = stockAnterior,
+                    Tipo = "ENTRADA"
+                });
+
+                MessageBox.Show($"Entrada registrada correctamente.\nStock actualizado: {stockNuevo} unidades.",
+                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txtCantidad.Clear();
+                CargarProductosEnCombo();
+                CargarMovimientos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar la entrada:\n" + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDeshacer_Click(object sender, EventArgs e)
+        {
+            var operacion = _deshacerService.Deshacer();
+
+            if (operacion == null)
+            {
+                MessageBox.Show("No hay operaciones recientes para deshacer.", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            _productoRepository.ActualizarStock(operacion.ProductoId, operacion.StockAnterior);
+
+            var ultimoMovimiento = _movimientoRepository.ObtenerUltimoPorProducto(operacion.ProductoId);
+            if (ultimoMovimiento != null)
+                _movimientoRepository.Eliminar(ultimoMovimiento.Id);
+
+            MessageBox.Show("Última entrada deshecha correctamente.", "Deshacer",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            CargarProductosEnCombo();
+            CargarMovimientos();
         }
     }
 }
