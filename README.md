@@ -62,10 +62,7 @@ database/
 ## Integrantes
 
 Melissa Jomeissy Sanchez Castro 
-Carlos Ernesto Contreras Bonilla
 Jorge Steven Moreno Hernandez 
-Oswaldo Alexander Henriquez Miranda 
-Estuardo Alejandro Henriquez Mejia 
 Juan Carlos Constanza Campos 
 
 
@@ -81,7 +78,7 @@ Juan Carlos Constanza Campos
 
 ##  Estado actual
 
- En desarrollo (Fase 1 - Prototipo 30%)
+ Fase 2 Proyecto Finalizado
 
 ---
 
